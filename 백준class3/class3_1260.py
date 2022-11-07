@@ -8,7 +8,7 @@ visited_bfs = [0] * (N+1)
 
 for _ in range(M):
     a,b = map(int,input().split())
-    graph[a][b] = graph[b][a] =1
+    graph[a][b] = graph[b][a] = 1
 
 def dfs(v):
     visited_dfs[v] = 1
@@ -16,6 +16,7 @@ def dfs(v):
     
     for i in range(1,N+1):      #1~N까지 재귀로
         if(visited_dfs[i] == 0 and graph[v][i] == 1):
+            visited_dfs[i] = 1
             dfs(i)
 
 def bfs(v):
@@ -26,7 +27,7 @@ def bfs(v):
         x = q.popleft()
         print(x,end=' ')
         for i in range(1,N+1):
-            if(visited_bfs[i] == 0 and graph[v][i] == 1):
+            if(visited_bfs[i] == 0 and graph[x][i] == 1):
                 q.append(i)
                 visited_bfs[i] = 1
 dfs(V)
