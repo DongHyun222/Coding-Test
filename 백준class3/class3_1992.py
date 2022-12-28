@@ -1,3 +1,5 @@
+#백준 class3 1992번 
+
 n = int(input())
 graph = [list(map(int,input())) for _ in range(n)]
 
