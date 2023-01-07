@@ -1,3 +1,5 @@
+#백준 class3 2667번 
+
 N = int(input())
 graph = []
 
